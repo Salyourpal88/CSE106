@@ -1,0 +1,50 @@
+body {
+  color: white;
+  background-size: 1900px 800px;
+  font-size: 25px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#Home{
+  background-image: url("../assets/BG1.jpg");
+  background-position: center;
+}
+
+#Page1{
+  background-image: url("../assets/BG2.jpg");
+  background-size: 1900px 1400px;
+  background-position: center;
+}
+
+#Page2{
+  background-image: url("../assets/BG3.jpg");
+  background-size: 1900px 1400px;
+  background-position: center;
+}
+
+#Page3{
+  background-image: url("../assets/BG4.jpg");
+  background-size: 1900px 1400px;
+  background-position: center;
+}
+
+h1 {
+  margin: 15px;
+  padding: 20px;
+  width: 280px;
+  border: 10px solid white;
+}
+
+h2{
+  text-align: center;
+  font-size: 35px;
+}
+
+.p2{
+  text-align: left;
+  font-size: 20px;
+}
+
+ul{
+  list-style-type: none;
+}

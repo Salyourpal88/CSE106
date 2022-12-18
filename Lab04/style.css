@@ -1,0 +1,29 @@
+div {
+    background-color: lightgrey;
+    width: 125px;
+    border: 5px solid green;
+    padding: 20px;
+    margin: 20px;
+}
+
+p {
+    border: 1px solid black;
+    border-width: 1px 1px;
+}
+
+.button {
+    height:25px; 
+    width:25px;
+}
+
+.button1{
+    background-color: rgb(57, 131, 57);
+}
+
+.button2{
+    background-color: Red;
+}
+
+.button3{
+    background-color: aqua;
+}

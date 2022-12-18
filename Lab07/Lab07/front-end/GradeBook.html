@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <link rel="stylesheet" href="style.css" />
+    <head>
+      <title>Gradebook</title>
+    </head>
+    <h6> Welcome to the Gradebook!</h6>
+    <h1>Display Entire Gradebook:</h1> <p id = 0></p>
+    <div id="demo">
+      <button type="button" onclick="loadDoc()">Display Content</button>
+    </div>
+    <h2>Display Student Grade:</h2> <p id = 1></p>
+    <form>
+      <label for="first">First Name:</label><br>
+      <input type="text" id="first" name="first" /><br />
+      <label for="fname">Last Name:</label><br>
+      <input type="text" id="last" name="last" />
+      <button type="button" id="Grade" onclick="loadDoc1()">Search</button>
+    </form>
+    <h3>Add Student and Grade</h3> <p id = 2></p>
+    <form>
+      <label for="nombre">Full Name:</label><br>
+      <input type="text" id="nombre" name="nombre" /><br />
+      <label for="percent">Grade:</label><br>
+      <input type="text" id="percent" name="percent" />
+      <button type="button" id="Add" onclick="loadDoc2()">Add</button>
+    </form>
+    <h4>Choose Student, Update Grade</h4> <p id = 3></p>
+    <form>
+      <label for="nickname">Full Name:</label><br>
+      <input type="text" id="nickname" name="nickname" /><br>
+      <label for="percentage">New Grade:</label><br>
+      <input type="text" id="percentage" name="percentage" />
+      <button type="button" id="Find" onclick="loadDoc3()">Update</button>
+    </form>
+    <h5>Remove Student Grade</h5> <p id = 4></p>
+    <form>
+      <label for="person">Full Name:</label><br>
+      <input type="text" id="person" name="person" />
+      <button type="button" id="Remove" onclick="loadDoc4()">Remove</button>
+    </form>
+    <script src="edit.js"></script>
+  </body>
+</html>
