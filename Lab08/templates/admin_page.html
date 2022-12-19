@@ -1,0 +1,31 @@
+<html>
+    <title>Lab 8</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <div class = "transbox">
+    <head>
+        <h1>ACME University</h1>
+        <p style="text-align: left;">Hello, Admin</p>
+        <p style="text-align: right;"> <a href="login.html">Logout</a></p>
+    </head>
+
+    <body>
+        <h1>Admin Stuff</h1>
+        <table>
+            <tr>
+                <th>Course Name</th>
+                <th>Lecture Times</th>
+                <th>Students Enrolled</th>
+            </tr>
+            <tr>
+                <td><a href="class_1.html">CSE106</a></td>
+                <td>TR 11:00 - 11:50 AM</td>
+                <td>5/10</td>
+            </tr>
+            <tr>
+                <td><a href="class_1.html">CSE 100</a></td>
+                <td>TR 12:00 - 1:20 PM</td>
+                <td>6/10</td>
+            </tr>
+        </table>
+    </body>
+</html>

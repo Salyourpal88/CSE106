@@ -1,0 +1,28 @@
+<html>
+    <title>Lab 8</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <div class = "transbox">
+    <head>
+        <div class = "transbox">
+            <h1>ACME University</h1>
+        </div>
+    </head>
+
+    <body>
+        <div class="outerbox">
+        <h1>Login</h1>
+        <p>
+            <form method = "POST" action="">
+                
+                <p>{{ form.hidden_tag()}}</p>
+                <p>{{ form.username }}</p>
+                <p>{{ form.password }}</p>
+                <p>{{ form.submit  }}</p>
+            </form>
+        </p>
+    </div>
+    </div>
+    </body>
+</div>
+<script src = "{{ url_for('static', filename = 'js/learn.js')}}" ></script>
+</html>

@@ -1,0 +1,32 @@
+<html>
+    <title>Lab 8</title>
+    <head>
+        <div class = "transbox">
+            <h1>ACME University</h1>
+            <p style="text-align: left;">Hello, Student</p>
+        </div>
+    </head>
+    <body>
+        <div class="transbox">
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>Teacher</th>
+                <th>Time</th>
+                <th>Enrollment</th>
+                <th>Add or Remove</th>
+            </tr>
+            {% for student in students %}
+                <tr>
+                    <td>{{ student.Course_ID }}</td>
+                    <td>{{ student.Teacher }}</td>
+                    <td>{{ student.Time }}</td>
+                    <td>{{ student.Enrollment}}/{{student.Capacity}}</td>
+                    <td>ADD OR DELETE FUNCTION HERE</td>
+                </tr>
+                {% endfor %}
+        </table>
+        </div>
+    </body>
+    <link href = "{{ url_for('static', filename='css/login.css') }}" rel = " stylesheet">
+</html>

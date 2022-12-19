@@ -1,0 +1,22 @@
+<html>
+    <title>Lab 8</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <div class = "transbox">
+    <head>
+        <h1>ACME University</h1>
+    </head>
+    <body>
+        <div class="outerbox">
+            <h1>Register</h1>
+            <div class="innerbox">
+            <form method = "POST" action="">
+                <p>{{ form.hidden_tag() }}</p>
+                <p>{{ form.name }}</p>
+                <p>{{ form.authentication }}</p>
+                <p>{{ form.username }}</p>
+                <p>{{ form.password }}</p>
+                <p>{{ form.submit  }}</p>
+            </form>
+    </body>
+    </div>
+</html>

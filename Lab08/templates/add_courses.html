@@ -1,0 +1,43 @@
+<html>
+    <title>Lab 8</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <div class = "transbox">
+    <head>
+        <h1>ACME University</h1>
+        <p style="text-align: left;">Hello, Student</p>
+        <p style="text-align: right;"> <a href={{ url_for('logout') }}>Logout</a></p>
+    </head>
+
+    <body>
+        <div class = "innerbox">
+            <h1>Available Courses</h1>
+            <table>
+                <tr>
+                    <th>Course Name</th>
+                    <th>Instructor</th>
+                    <th>Time</th>
+                    <th>Students Enrolled</th>
+                    <th>Action</th>
+                </tr>
+                {% for student in students %}
+                <tr>
+                    <td>{{ student.course_id }}</td>
+                    <td>{{ student.teacher }}</td>
+                    <td>{{ student.time }}</td>
+                    <td>{{ student.enrollment }}/{{ student.capacity }}</td>
+                    <td> <form method = "POST" action=""><input type = "submit" name = "Add" value="{{ student.id }}" /> </form></td>
+                </tr>
+                {% endfor %}
+            </table>
+            {% with messages = get_flashed_messages() %}
+                {% if messages  %}
+                    {% for msg in messages %}
+                        <p> {{msg}} </p>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <a href={{ url_for('student') }}>Return to Your Courses</a>
+        </div>
+    </body>
+</div>
+</html>

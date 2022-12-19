@@ -1,0 +1,32 @@
+<html>
+    <title>Lab 8</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <div class = "transbox">
+    <head>
+        <h1>ACME University</h1>
+        <p style="text-align: left;">Hello, {{displayName}}</p>
+        <p style="text-align: right;"><a href={{ url_for('logout') }}>Logout</a></p>
+    </head>
+
+    <body>
+        <div class = "outerbox">
+        <h1>Your Courses</h1>
+        <div class = "innerbox">
+        <table>
+            <tr>
+                <th>Course Name</th>
+                <th>Lecture Times</th>
+                <th>Students Enrolled</th>
+            </tr>
+            {% for classes in courses %}
+                <tr>
+                    <td><a href={{id}}/{{ classes.course_id }}>{{ classes.course_id }}</a></td>
+                    <td>{{ classes.time }}</td>
+                    <td>{{ classes.enrollment }}/{{ classes.capacity }}</td>
+                </tr>
+                {% endfor %}
+        </table>
+    </div>
+    </div>
+    </body>
+</html>

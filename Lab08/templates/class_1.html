@@ -1,0 +1,38 @@
+<html>
+    <title>Lab 8</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <div class = "transbox">
+    <head>
+        <h1>ACME University</h1>
+        <p style="text-align: left;">Hello, {{displayName.name}}</p>
+        <p style="text-align: right;"> <a href={{ url_for('logout') }}>Logout</a></p>
+    </head>
+
+    <body>
+        <h1>{{course.Course_ID}} Roster</h1>
+        <table>
+            <tr>
+                <th>Student Name</th>
+                <th colspan="2">Grade</th>
+            </tr>
+                {% for name in names %}
+                <tr>
+                    <td>{{ name.name }}</td>
+                    <td>{{ name.grade }}</td>
+
+                    <td class="edit">
+                        <form method="POST" action="/{{displayName.id}}/{{course.Course_ID}}">
+                            <input type="hidden" value="{{ name.grade }}" name="oldGrade">
+                            <input type="hidden" value="{{ name.name }}" name="selectedName">
+                            <input style="width:40px" type="text" value="{{ name.grade }}" name="newGrade"><br>
+                            <input type="submit" value="Update">
+                        </form>
+                    </td>
+                </tr>
+                {% endfor %}
+        </table>
+        <a href={{ url_for('instructor', ID=displayName.id, name=displayName.name) }}>Return to Your Courses</a>
+    </div>
+    </div>
+    </body>
+</html>
